@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AlexChecker - Futuristic Credit Card Checker" />
+  <title>AlexChecker - Beta</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="beta-badge">Versión Beta</div>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <div class="logo">
+          <span class="logo-text">A</span>
+        </div>
+      </div>
+      <h1>AlexChecker</h1>
+    </header>
+    <main>
+      <section class="input-section">
+        <label for="numbers">Credit Card Numbers:</label>
+        <textarea id="numbers" rows="10" cols="50" placeholder="385841472xxxxx|09|2026|2897"></textarea>
+      </section>
+      <section class="action-section">
+        <button id="check-btn" onclick="toggleButtons()">Start Checking</button>
+        <button id="stop-check-btn" disabled>Stop Checking</button>
+      </section>
+      <section class="output-section">
+        <div class="result-container">
+          <h2><span class="live">Live</span>: <span id="ali-count">0</span></h2>
+          <div id="ali-numbers"></div>
+          <button class="copy-btn" onclick="copyToClipboard('ali-numbers')">Copy</button>
+        </div>
+        <div class="result-container">
+          <h2><span class="dead">Dead</span>: <span id="muhammad-count">0</span></h2>
+          <div id="muhammad-numbers"></div>
+          <button class="copy-btn" onclick="copyToClipboard('muhammad-numbers')">Copy</button>
+        </div>
+        <div class="result-container">
+          <h2><span class="unknown">Unknown</span>: <span id="murad-count">0</span></h2>
+          <div id="murad-numbers"></div>
+          <button class="copy-btn" onclick="copyToClipboard('murad-numbers')">Copy</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>© 2025 AlexChecker - Futuristic Beta Version</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
